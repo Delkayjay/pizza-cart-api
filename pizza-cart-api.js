@@ -29,7 +29,7 @@ document.addEventListener('alpine:init', () => {
         },
 
         pizzaImage(pizza) {
-            return `/img/${pizza.flavour.toLowerCase()}.png`
+            return `/imgg/${pizza.flavour.toLowerCase()}.png`
         },
 
         message : 'Eating pizzas',
