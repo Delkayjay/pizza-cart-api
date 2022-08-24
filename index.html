@@ -48,14 +48,14 @@
                 Cart total: <strong x-text="cart.total" ></strong> 
             </div>
             <div class="carts">
-                <table>
-                    <tr><h3>Shopping Cart</h3>
+                <table><h3>Shopping Cart</h3>
+                    <tr>
                         <th>Flavour</th>
                         <th>Quantity</th>
                         <th>Add/Remove</th>
                         <th>Total</th>
                     </tr>
-                    <template x-for="pizza in cart.pizzas" >
+                    <template x-for="pizza in cart.pizzas" >                
                         <tr>
                             <td x-text="pizza.flavour" ></td>
                             <td x-text="pizza.qty" ></td>
@@ -63,8 +63,7 @@
                                 <button x-on:click="add(pizza)" >+</button>
                                 <button x-on:click="remove(pizza)" >-</button>
                             </td>
-                            <td x-text="pizza.total" ></td>
-                            
+                            <td x-text="pizza.total" ></td>                            
                         </tr>
                     </template>
                     <tr>
@@ -92,7 +91,7 @@
                     <td>
                         <img x-bind:src="pizzaImage(pizza)" alt="">
                     </td>
-                    <td x-text="pizza.flavour" ></td>
+                    <td x-text="pizza.flavour.toLowerCase()" ></td>
                     <td x-text="pizza.size" ></td>
                     <td x-text="pizza.price" ></td>
                     <td>
